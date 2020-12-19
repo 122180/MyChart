@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/constraintlayout"
+    android:background="@color/chat_color"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/chat_design"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvMessagesent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/default_color"
+            android:textSize="15sp"
+            tools:text="Hii How are You" />
+
+        <TextView
+            android:id="@+id/tvMessageTimeSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/default_color"
+            tools:text="8:27" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llsendimage"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        tools:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        android:layout_marginTop="16dp"
+
+      android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mssage_receive_backcolor"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/sendImage"
+            android:padding="-100dp"
+           
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/sendimage"/>
+        <TextView
+            android:id="@+id/tvsendimageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            tools:text="8:27" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/mssage_receive_backcolor"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <TextView
+            android:id="@+id/tvMessageRecieve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            tools:text="Hii How are You" />
+
+        <TextView
+            android:id="@+id/tvMessageTimeReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginRight="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            tools:text="8:27" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llreceiveimage"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        tools:visibility="gone"
+       app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout2"
+        android:layout_marginTop="16dp"
+       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+
+        android:background="@drawable/mssage_receive_backcolor"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/receiveImage"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/sendimage"/>
+        <TextView
+            android:id="@+id/tvreceveimageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            tools:text="8:27" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
